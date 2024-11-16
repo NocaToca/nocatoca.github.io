@@ -4,7 +4,6 @@ title: Blog
 permalink: /blog/
 ---
 
-<main>
   <!-- Blog Posts Section -->
   <div class="posts">
     {% if site.posts.size > 0 %}
@@ -31,4 +30,3 @@ permalink: /blog/
       {% endfor %}
     </form>
   </div>
-</main>
