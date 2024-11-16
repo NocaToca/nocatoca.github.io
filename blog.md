@@ -4,8 +4,6 @@ title: Blog
 permalink: /blog/
 ---
 
-<h1>Blog</h1>
-
 <main>
   <!-- Blog Posts Section -->
   <div class="posts">
