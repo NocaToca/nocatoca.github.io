@@ -7,19 +7,30 @@
     <link rel="stylesheet" href="/css/style.css"> <!-- Link your CSS file here -->
 </head>
 <body>
-    <nav class="menu-bar">
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">Home</a></li>
-            <li><a href="/projects">Home</a></li>
-            <li><a href="/tutorials">Home</a></li>
-            <li><a href="/blog">Home</a></li>
-        </ul>
-    </nav>
+    <div class="toolbar">
+        <button id="menu-toggle">☰</button>
+        <nav id="menu" class="hidden">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/tutorials">Tutorials</a></li>
+                <li><a href="/blog">Blog</a></li>
+            </ul>
+        </nav>
+    </div>
     <div class="container">
         <img src="/images/profile_image.jpg" alt="Profile Image" class="profile-img">
         <h1>Noellva</h1>
         <p>GPU Programmer and Middleware developer!</p>
     </div>
 </body>
+<script>
+    const toggle_button = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+
+    toggle_button.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+    })
+</script>
 </html>
