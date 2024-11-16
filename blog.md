@@ -16,5 +16,5 @@ permalink: /blog/
     {% endfor %}
   </ul>
 {% else %}
-  <p>There are no posts yet!</p>
+  <p>There are no posts yet tewst!</p>
 {% endif %}
