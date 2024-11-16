@@ -92,11 +92,10 @@ body{
     left: -250px; 
     height: 100%; 
     width: 250px; 
-    background: rgba(255, 255, 255, 0.9);
-    box-shadow: 4px 0 6px rgba(0, 0, 0, 0.1);
+    background: rgba(249, 168, 236, 0.9);
+    box-shadow: 4px 0 6px rgba(0, 0, 0, 0.3);
     transition: left 0.3s ease; 
     z-index: 1000;
-    padding: 20px 15px;
     overflow-y: auto;
 }
 
