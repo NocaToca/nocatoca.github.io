@@ -11,8 +11,7 @@ permalink: /blog/
         <h2><a href="{{ post.url }}">{{ post.title }}</a>
         -
         {% for category in post.categories %}
-            {{category}}
-            {% unless forloop.last %}, {% endunless %}
+            {{category}}{% unless forloop.last %}, {% endunless %}
         {% endfor %}
         </h2>
         <p>{{ post.excerpt | strip_html }}</p>
