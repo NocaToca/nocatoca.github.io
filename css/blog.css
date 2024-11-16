@@ -30,6 +30,7 @@ main {
     grid-template-columns: 4fr 1fr;
     gap: 10px;
     margin-top: 20px;
+    align-items: start;
 }
 
 .posts{
