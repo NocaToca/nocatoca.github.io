@@ -8,7 +8,13 @@ permalink: /blog/
   {% if site.posts.size > 0 %}
     {% for post in site.posts %}
       <div class="post">
-        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <h2><a href="{{ post.url }}">{{ post.title }}</a>
+        -
+        {% for category in post.categories %}
+            {{category}}
+            {% unless forloop.last %}, {% endunless %}
+        {% endfor %}
+        </h2>
         <p>{{ post.excerpt | strip_html }}</p>
       </div>
     {% endfor %}

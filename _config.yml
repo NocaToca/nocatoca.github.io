@@ -17,6 +17,15 @@ url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
 blogtitle: Noellva's Blog!
+categories:
+  - General
+  - Update
+  - New
+  - Personal
+  - Project
+  - Graphics
+  - Game Development
+  - Vascou
 
 # Build settings
 markdown: kramdown
