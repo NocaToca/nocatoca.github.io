@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="/css/style.css"> <!-- Link your CSS file here -->
 </head>
 <body>
+    <div id="overlay" class="hidden"></div>
     <div class="toolbar">
         <button id="menu-toggle">☰</button>
-        <nav id="menu" class="hidden">
+        <nav id="side-menu" class="hidden">
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="/about">About</a></li>
@@ -27,10 +28,22 @@
 </body>
 <script>
     const toggle_button = document.getElementById("menu-toggle");
-    const menu = document.getElementById("menu");
+    const side_menu = document.getElementById("side-menu");
 
     toggle_button.addEventListener("click", () => {
-        menu.classList.toggle("hidden");
-    })
+        menu.classList.toggle("open");
+    });
+
+    const overlay = document.getElementById("overlay");
+
+    toggleButton.addEventListener("click", () => {
+        side_menu.classList.toggle("open");
+        overlay.classList.toggle("show");
+    });
+
+    overlay.addEventListener("click", () => {
+        side_menu.classList.remove("open");
+        overlay.classList.remove("show");
+    });
 </script>
 </html>
