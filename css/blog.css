@@ -27,7 +27,7 @@ header h1{
 
 main {
     display: grid;
-    grid-template-columns: 1fr 450px;
+    grid-template-columns: 2fr 1fr;
     gap: 20px;
     margin-top: 20px;
 }
