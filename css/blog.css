@@ -27,7 +27,7 @@ header h1{
 
 main {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2fr 450px;
     gap: 20px;
     margin-top: 20px;
 }
@@ -71,7 +71,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-self: end;
-    max-width: 300px;
+    /* max-width: 300px; */
 }
 
 .filters h3 {
