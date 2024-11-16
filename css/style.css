@@ -26,3 +26,26 @@ body{
     margin-bottom: 20px;
     border: 3px solid white;
 }
+
+.menu-bar u1{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.menu-bar li {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+}
+
+.menu-bar a{
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.menu-bar a:hover{
+    color: #ff69b4;
+}
