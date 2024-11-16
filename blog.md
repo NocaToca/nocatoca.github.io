@@ -6,8 +6,6 @@ permalink: /blog/
 
 <h1>Blog</h1>
 
-<h1>Blog</h1>
-
 {% if site.posts.size > 0 %}
   <ul>
     {% for post in site.posts %}
