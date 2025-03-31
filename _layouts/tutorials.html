@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;500;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorials</title>
+    <link rel="stylesheet" href="/css/wip.css"> <!-- Link your CSS file here -->
+</head>
+<body>
+    <div id="overlay" class="hidden"></div>
+    <div class="toolbar">
+        <button id="menu-toggle">☰</button>
+        <nav id="side-menu" class="hidden">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/tutorials">Tutorials</a></li>
+                <li><a href="/blog">Blog</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container">
+        <h1>This page is currently a WIP</h1>
+    </div>
+</body>
+<script>
+    const toggle_button = document.getElementById("menu-toggle");
+    const side_menu = document.getElementById("side-menu");
+    const overlay = document.getElementById("overlay");
+
+    toggle_button.addEventListener("click", () => {
+        side_menu.classList.toggle("open");
+        overlay.classList.toggle("show");
+    });
+
+    overlay.addEventListener("click", () => {
+        side_menu.classList.remove("open");
+        overlay.classList.remove("show");
+    });
+</script>
+</html>
