@@ -8,6 +8,17 @@ body{
     margin: 0;
 }
 
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+    color: white; 
+    text-align: center;
+}
+
+
 .menu-bar u1{
     list-style: none;
     margin: 0;
