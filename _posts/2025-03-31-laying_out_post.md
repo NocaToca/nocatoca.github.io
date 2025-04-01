@@ -4,7 +4,7 @@ title: "Commitment - Weekly Update #1"
 date: 2025-03-31 19:17:20 -0500
 excerpt: "Information regarding my plans."
 categories: [General,Personal,SciFiProj,Game Development,Project]
-pinned: false
+pinned: true
 ---
 
 # Wow!
