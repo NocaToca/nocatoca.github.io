@@ -31,3 +31,4 @@ categories:
 # Build settings
 markdown: kramdown
 permalink: pretty
+furture: true
