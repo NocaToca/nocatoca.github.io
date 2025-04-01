@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Commitment - Weekly Update #1"
-date: 2025-03-31 19:17:20 -0500
+date: 2025-03-30
 excerpt: "Information regarding my plans."
 categories: [General,Personal,GameDev,Project]
 pinned: true
