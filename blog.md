@@ -27,7 +27,8 @@ permalink: /blog/
   <form>
     {% for category in site.categories %}
       <label>
-        <input type="checkbox" name="category" value="{{ category[0] }}">{{ category[0] }}
+        <input type="checkbox" name="category" value="{{ category[0] }}">
+        {{ category[0] }} ({{ category[1] | size }} posts)
       </label>
     {% endfor %}
   </form>
