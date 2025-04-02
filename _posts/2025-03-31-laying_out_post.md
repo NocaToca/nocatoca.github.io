@@ -19,7 +19,7 @@ This is all to say that I am planning to give weekly updates about what I have b
 ## Well, What Is This Project?
 Yes, I suppose that is important context! To give a brief overview:<br><br>
 
-For the past 6 years or so, I have been on and off developer a game that is essentially a passion project. The world has aggregated greatly from that time - and I will get to it when I post updates regarding it - but a big issue has been that the actual game project has died around 4 times. It's not anyone else's fault but my own; I've only ever developed on the codebase myself with this. The actual reasons it has died have all been various, but I do believe I can overcome them.<br><br>
+For the past 6 years or so, I have been on and off developing a game that is essentially a passion project. The world has aggregated greatly from that time - and I will get to it when I post updates regarding it - but a big issue has been that the actual game project has died around 4 times. It's not anyone else's fault but my own; I've only ever developed on the codebase myself with this. The actual reasons it has died have all been various, but I do believe I can overcome them.<br><br>
 
 In fact, I'm at a point where I can pretty confidentally say that I probably will stick with what I'm doing! This is why I want to start on this step of journaling and blogging development.<br><br><br>
 
@@ -28,7 +28,7 @@ Usually, this question is probably not interesting to ask, but I want to since i
 
 I remember my Game Design 3 professor asking what an "art game" is and me not really having a reasonalbe definition for it (side note: loved him!). I don't remember what I actually answered or what he said about it, but I do know that he essentially talked about how outlook on development mattered. <br><br>
 
-This is all to say, I think people focus way too much on what they think should be done rather than what they want to do. While I'm aspiratious, I'm not naive. The scope of this project is pretty extrodenary, but I see no reason for that to stop me from working on it. I make something for 10 years and no one buys it? So what? That's essentially what my mindset has come to.<br><br><br>
+This is all to say, I think people focus way too much on what they think should be done rather than what they want to do. While I'm aspiratious, I'm not naive. The scope of this project is pretty extraordinary, but I see no reason for that to stop me from working on it. I make something for 10 years and no one buys it? So what? That's essentially what my mindset has come to.<br><br><br>
 
 ## How About For The Now?
 Well! I do want to give you a bit of an idea for what I will be sharing. At the moment, I am implementing the combat system first before doing anything else. My next few updates will be about this. However, I want to spend my initial time to go over why I chose Monogame and how exactly I am designing this project.<br><br><br>
