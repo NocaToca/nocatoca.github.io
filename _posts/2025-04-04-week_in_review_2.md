@@ -18,7 +18,9 @@ Now, before I go on a further tangent, I spent this week mostly implementing the
   \- Create health UIs<br><br>
 
 While the end result does not look all that pretty, I am honestly happy with how it came out in the end! <br>
-![Here's an overview](/images/week_in_review_2/overview_showcase.png) <br><br>
+<p align="center">
+  <img src="{{ site.baseurl }}/images/week_in_review_2/overview_showcase.png" alt="Circle">
+</p>  <br><br>
 
 ## The Option Buttons
 Now, now, I know everything does not look AAA game-ready - but I do have texture loading support. I'm only really focusing on functionality regardless, and I think these option menus are a great example of such. <br><br>
@@ -26,7 +28,9 @@ Now, now, I know everything does not look AAA game-ready - but I do have texture
 So, as a brief overview of my UI system, we have a general UI class that handles everything that that specific UI is rendering (at the moment, there's only ever one UI on the screen). At the start of this week, this UI class knew basically nothing about anything besides what it wants to draw. These were passed to the UI as classes that implemented event interfaces. If a class wanted to draw something, it would create a class that implemented the corresponding event (ITextureEvent, ITextEvent or both) and filled out what it wanted to be drawn, then send that information to the ui through UserInterface.ActivateEvent(IBaseEvent). For deletion, these events have an EventHandler called OnCompleted that the UserInterface listens to. When this event is invoked, boom! It deletes all the necessary resources detected during event activation! And if the class wanted to refresh it's draw infromation (say, it's a moving object across the screen), it would simply tell the original event to change the drawing rectangle!<br><br>
 
 Hopefully that blurb was not confusing. Here! I'll use my excellent photoshop skills to give a little diagram: <br>
-![Diagram!](/images/week_in_review_2/option_ui_diagram_showcase.png) <br><br>
+<p align="center">
+  <img src="{{ site.baseurl }}/images/week_in_review_2/option_ui_diagram_showcase.png" alt="Circle">
+</p> <br><br>
 
 It's pretty easy to see that there are defined roles for front end and backend here. It is helpful to note that the UserInterface class is **not** the only class responsible for drawing, as it only handles drawing components that are not entities! <br><br>
 
@@ -51,12 +55,14 @@ Now it would be reasonable to assume that, with my minor in math and my experien
 
 In all my infinite wisdom, I did not actually save these funny issues to share because I can't think ahead past dinner. But! I can show you how the circle is drawn:<br>
 <p align="center">
-  <img src="{{ site.baseurl }}/images/week_in_review_2/circle_draw_example.png" alt="Circle" width="300">
+  <img src="{{ site.baseurl }}/images/week_in_review_2/circle_draw_example.png" alt="Circle">
 </p>
 <br><br>
 
 I got the draw line code from online since I was not going to figure out rotating a line myself, but I used that to make a pseudo-circle by what is essentially spinning a point around in a circle and drawing a line between intermediate moments. It let me come up with this indicator to showcase range: <br>
-![Range Showcase!](/images/week_in_review_2/range_showcase.png)<br><br>
+<p align="center">
+  <img src="{{ site.baseurl }}/images/week_in_review_2/range_showcase.png" alt="Circle">
+</p><br><br>
 
 You'll also notice a line coming out to the edge of the circle - this is because the ability I'm showcasing is a targeted dash. This line follows your cursor up until the edge of the border. You can't see my cursor because the silly windows screenshot actually hides it when you take screen shots - but this is actually done through setting the positions of the end and start point to anonymous functions! This allows the indicator to constantly follow the mouse without having to subscribe to an update call (as we would like to keep the draw and update calls as seperate as possible). You can click to confirm casting the skill or right click to cancel casting the skill. <br><br><br>
 
@@ -83,16 +89,16 @@ I actually set up a whole system and edited to render the text correctly, only t
 # Further To-Do
 Since I don't think I actually shared it before, this is the updated to-do list I currently have and you can expect to see:<br>
 \-Create more skills (particular cast time)<br>
-'   \-Finish Eclara<br>'
-'   \-Create Alata<br>'
+	&nbsp;	&nbsp;   \-Finish Eclara<br>
+	&nbsp;	&nbsp;   \-Create Alata<br>
 \-Create ephemeral turns (and cast times!)<br>
 \-Create turn projections<br>
 \-Create Highlighting follow actions<br>
 \-Create simple animations (pull from RPG Maker animations for now)<br>
 \-Create more complicated damage (can be done anytime really)<br>
 \-Create final two characters that will be used in demo:<br>
-'   \-Lattice<br>'
-'   \-Lyscander<br>'
+	&nbsp;	&nbsp;   \-Lattice<br>
+	&nbsp;	&nbsp;   \-Lyscander<br>
 \-Create resources (mana/charge)<br>
 \-Create skill modification with charge<br>
 \-Create basic AI to fight back!<br>
