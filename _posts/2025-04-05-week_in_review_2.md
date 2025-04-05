@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Skills and UIs - Weekly Update #2"
-date: 2025-04-04
+date: 2025-04-05
 excerpt: "The fun art of prototyping UI and UX"
 categories: [GameDev,Project,Update]
 pinned: false
