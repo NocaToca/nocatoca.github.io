@@ -7,7 +7,7 @@ categories: [GameDev,Project,Update]
 pinned: false
 ---
 # What Combat System?
-Last week, I attached my to-do I have made in discord to the end of the post, and a lot of it I realize probably made no sense to you guys. Forgoing the characters (I'll explain them in seperate posts), I'm going to assume the term "ephemeral turns" was made no sense at all! Don't worry - I'm here to save the day and explain my super awesome combat system I am prototyping! I also hope that this will put things into light before I showcase what I did this week. <br><br><br>
+Last week, I attached my to-do I had made in discord to the end of the post, and a lot of it I realize probably made no sense to you guys. Forgoing the characters (I'll explain them in seperate posts), I'm going to assume the term "ephemeral turns" was made no sense at all! Don't worry - I'm here to save the day and explain my super awesome combat system I am prototyping! I also hope that this will put things into light before I showcase what I did this week. <br><br><br>
 
 ## Basic Overview
 The super short simple explanation of the combat system is that it is a Grid-Based Turn-Based Timeline-Based combat system (Wow! Three based type tags! Talk about buzzwords!). <br><br>
@@ -57,7 +57,7 @@ Additionally, a side-effect of charge is that you can change the power of a spel
 
 Finally, ephemeral turns also do not recover your turn actions, but you can take one extra action you havent made before ending an ephemeral turn (this is almost always going to be a Follow Action). Keeping in mind of what I said above, this is very helpful! It basically means that your follow actions *will not* put you farther down on the turn order, as your next turn (which is going to be non-ephemeral) cannot be moved by anything that happens during your ephemeral turn! <br><br>
 
-A final consideration (that doesn't relate to ephemeral turns) is that Turn Breaks reset your actions and timeline. So if you know you're going to turn break, there's not much of a reason to use all possible actions! <br><br><br>
+A final consideration (that doesn't relate to ephemeral turns) is that Turn Breaks reset your actions and timeline. So if you know you're going to turn break, there's not much of a reason to not use all possible actions! <br><br><br>
 
 # Now, Project Updates!
 Wow! That was a long preface (maybe should have been it's own post). It's okay though, now we can get to what I accomplished this week (I hope you're proud of me!): <br>
