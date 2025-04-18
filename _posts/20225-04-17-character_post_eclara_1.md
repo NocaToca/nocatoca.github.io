@@ -6,3 +6,5 @@ excerpt: "Time to introduce the first character!"
 categories: [GameDev,Project,Update,Character]
 pinned: false
 ---
+# Hello!!
+Welcome to my first character introduction! I must say, I am super anxious to share my more creative side of things since I am not too much of a novelist, but I am quite eager to start getting character ideas out there so I can track their evolution - and so you can too!
