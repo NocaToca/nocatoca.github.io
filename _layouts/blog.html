@@ -44,4 +44,31 @@
         overlay.classList.remove("show");
     });
 </script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const checkboxes = document.querySelectorAll(".category-filter");
+      const posts = document.querySelectorAll(".post");
+  
+      function filterPosts() {
+        const selected = Array.from(checkboxes)
+          .filter(checkbox => checkbox.checked)
+          .map(checkbox => checkbox.value);
+  
+        posts.forEach(post => {
+          const matches = selected.length === 0 || selected.some(category =>
+            post.classList.contains(category)
+          );
+          post.style.display = matches ? "block" : "none";
+        });
+      }
+  
+      checkboxes.forEach(checkbox => {
+        checkbox.addEventListener("change", filterPosts);
+      });
+  
+      // Optional: trigger filter once on load
+      filterPosts();
+    });
+  </script>
+  
 </html>

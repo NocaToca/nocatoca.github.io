@@ -35,23 +35,3 @@ permalink: /blog/
     {% endif %}
   </div>
 </div>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const checkboxes = document.querySelectorAll(".category-filter");
-  const posts = document.querySelectorAll(".post");
-
-  function updateFilters() {
-    const activeCategories = Array.from(checkboxes)
-      .filter(cb => cb.checked)
-      .map(cb => cb.value);
-
-    posts.forEach(post => {
-      const hasCategory = activeCategories.some(cat => post.classList.contains(cat));
-      post.classList.toggle("hidden", activeCategories.length > 0 && !hasCategory);
-    });
-  }
-
-  checkboxes.forEach(cb => cb.addEventListener("change", updateFilters));
-});
-</script>
