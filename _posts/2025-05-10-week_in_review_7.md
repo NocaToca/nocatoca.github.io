@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Silly AI - Weekly Update #6"
+title: "Silly AI - Weekly Update #7"
 date: 2025-05-11
 excerpt: "AI systems! GOAP FTW!"
 categories: [GameDev,Project,Update]
