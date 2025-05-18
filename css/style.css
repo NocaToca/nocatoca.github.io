@@ -58,29 +58,31 @@ body{
 
 .social-circles {
     display: flex;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
 .circle-btn {
-    width: 60px;
-    height: 60px;
-    background-color: #f8d7e8; /* default pastel pink */
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
+    display: inline-flex;
     align-items: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    justify-content: center;
+    background-color: #eee;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
-.circle-btn img {
-    width: 28px;
-    height: 28px;
+.circle-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: #333;
 }
 
+.circle-btn:hover {
+    background-color: #ccc;
+}
 .circle-btn.bluesky {
     background-color: #d0e9ff; /* pastel blue */
 }
@@ -89,10 +91,6 @@ body{
     background: linear-gradient(135deg, #fcd5ce, #ffc8dd, #d0a2f7); /* pastel gradient */
 }
 
-.circle-btn:hover {
-    transform: scale(1.1);
-    filter: brightness(1.1);
-}
 #menu-toggle{
     background-color: #ff69b4;
     border: none;
