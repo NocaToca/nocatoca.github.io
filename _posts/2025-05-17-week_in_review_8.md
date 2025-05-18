@@ -14,26 +14,26 @@ I'm sorry if this is the first post you're reading of mine. I'm cringey.<br><br>
 Anywho, this week is going to be a lot of words - not a lot of pictures or fun diagrams that I am absolutely famous for. The thing was that this was mostly a code and design decision, one I am honestly not that settled on. I'll get into everything and why, but for now let's talk about how it currently works in-game!<br><br>
 
 I'll provide my core concerns upfront, as I do ramble a bit here. You can think about a TLDR is me going over these three things:<br><br>
-- Should I keep this elemental system?<br>
-- Should I simplify or modularize it?<br>
-- Is it worth keeping just for Eclara?<br><br>
+\- Should I keep this elemental system?<br>
+\- Should I simplify or modularize it?<br>
+\- Is it worth keeping just for Eclara?<br><br>
 
 # Overview!
 The main gist is that damages have different damage types. These types are split by two main categories: physical and magical. Magical is what we're focusing on here, as that is then split into multiple other types. These base types include:<br>
-- Fire<br>
-- Ice<br>
-- Water<br>
-- Earth<br>
-- Wind<br>
-- Light<br>
-- Dark<br>
-- Celestial<br><br>
+\- Fire<br>
+\- Ice<br>
+\- Water<br>
+\- Earth<br>
+\- Wind<br>
+\- Light<br>
+\- Dark<br>
+\- Celestial<br><br>
 
 These base types can then be combined to make a combined type. At the moment, these combined types include:<br>
-- Nature (Water + Earth + Fire + Air)<br>
-- Eclipse (Light + Dark)<br>
-- Frozen (Ice + Earth)<br>
-- Cinder (Dark + Fire)<br><br>
+\- Nature (Water + Earth + Fire + Air)<br>
+\- Eclipse (Light + Dark)<br>
+\- Frozen (Ice + Earth)<br>
+\- Cinder (Dark + Fire)<br><br>
 
 I'll explain what each of these do and what their special applied effect is in a moment, but the first question is how these are applied. The answer to that is actually pretty simple. When a character deals damage, they send over the information of the raw damage they do. Any listeners (typically just weapons) add to that damage dictionary. Then, the damage is all added together and applied to the character that they're damaging. Before it's finished, it counts how many appearances of a certain damage type exist. So, if you are damaging through a skill that adds fire damage and your weapon deals extra fire damage on that skill type's hit, that'd be two fire appearances. This then passes that information to the character's ElementalHandler, who adds those to the list of elements, checks to see if it can combine anything, and then updates the stacks of each element. In this case, if it was empty, the character would have 2 stacks of Fire.<br><br>
 
@@ -61,18 +61,18 @@ Yes, all element damage is handled in a massive 1.5k line file! This was a poor 
 Regardless, there are a few records that represent different elements. The main one is Element, which takes an ElementType enum as well as an ushort for the amount. The reason for a ushort is that I like only using what I need within memory, and I don't think that people will be able to stack high enough to overload the ushort. Additionally, I don't need negative stacks, so it makes sense for it to be unsigned.<br><br>
 
 The ElementHandler also has an ElementalEffect private abstract class. Each elemental effect inherits from this. Whenever the ElementalHandler receives new element types, it will update each elemental effect's stacks. Most of these elemental effects act as buffs or OnStart effects. What each of them do is pretty simple:<br>
-- Fire - Health DoT<br>
-- Ice - Slow decrease<br>
-- Water - Resource/Mana DoT<br>
-- Earth - Physical Res decrease<br>
-- Wind - Physical Atk decrease<br>
-- Light - Magical Res decrease<br>
-- Dark - Magical Atk decrease<br>
-- Celestial - Nothing!<br>
-- Nature - Applies Fire/Water/Earth/Wind and has a special effect<br>
-- Eclipse - Applies Light/Dark at a stronger rate<br>
-- Frozen - Removes actions based on number of stacks<br>
-- Cinder - Spreads to enemies<br><br>
+\- Fire - Health DoT<br>
+\- Ice - Slow decrease<br>
+\- Water - Resource/Mana DoT<br>
+\- Earth - Physical Res decrease<br>
+\- Wind - Physical Atk decrease<br>
+\- Light - Magical Res decrease<br>
+\- Dark - Magical Atk decrease<br>
+\- Celestial - Nothing!<br>
+\- Nature - Applies Fire/Water/Earth/Wind and has a special effect<br>
+\- Eclipse - Applies Light/Dark at a stronger rate<br>
+\- Frozen - Removes actions based on number of stacks<br>
+\- Cinder - Spreads to enemies<br><br>
 
 Nature's special effect is that, on turn start, if the character's health percentage is greater than their resource percentage, they can only use actions. If it's the opposite, they can only use skills. They're unaffected if its equal, as it's balanced.<br><br>
 
