@@ -13,7 +13,7 @@ I'm a hobbiest game dev currently employed in middleware, and I do lots of codin
 IRL facts are that I'm 23, live in Virginia, and have an adorable --menace-- cat named Cinnamon! She's a calico and a third orange cat, of which she likes to exagerate. Look at her moments before disaster:<br><br>
 <br>
 <p align="center">
-  <img src="{{ site.baseurl }}/images/cinnamon.png" alt="">
+  <img src="{{ site.baseurl }}/images/cinnamon.png" class="cinnamon" alt="">
 </p>  <br><br>
 
 I build things like:<br>
