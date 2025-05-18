@@ -58,37 +58,31 @@ body{
 
 .social-circles {
     display: flex;
-    gap: 1rem;
+    justify-content: center;
+    gap: 12px;
     margin-top: 1rem;
 }
 
 .circle-btn {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #eee;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    background-color: #f0eaff; /* pastel lavender */
     text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.circle-btn svg {
-    width: 20px;
-    height: 20px;
-    fill: #333;
+    transition: transform 0.2s ease;
 }
 
 .circle-btn:hover {
-    background-color: #ccc;
-}
-.circle-btn.bluesky {
-    background-color: #d0e9ff; /* pastel blue */
+    transform: scale(1.1);
 }
 
-.circle-btn.instagram {
-    background: linear-gradient(135deg, #fcd5ce, #ffc8dd, #d0a2f7); /* pastel gradient */
+.circle-btn svg {
+    width: 24px;
+    height: 24px;
+    fill: #6c63ff; /* pastel purple */
 }
 
 #menu-toggle{
