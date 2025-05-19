@@ -28,7 +28,7 @@ h1 {
 }
 
 .project-card {
-    background-color: #fc8bb8;
+    background-color: #f5aac8;
     border-radius: 16px;
     overflow: hidden;
     text-decoration: none;
@@ -68,7 +68,7 @@ h1 {
 .project-desc {
     font-size: 1rem;
     margin: 0.5rem 1rem 1.5rem;
-    color: #f69ce1;
+    color: #f08ed9;
 }
 
 .menu-bar u1{
