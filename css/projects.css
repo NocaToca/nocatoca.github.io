@@ -28,7 +28,7 @@ h1 {
 }
 
 .project-card {
-    background-color: #fff0f6;
+    background-color: #fc8bb8;
     border-radius: 16px;
     overflow: hidden;
     text-decoration: none;
@@ -61,14 +61,14 @@ h1 {
 .project-tags {
     font-size: 0.9rem;
     margin: 0 1rem;
-    color: #888;
+    color: #000000;
     font-style: italic;
 }
 
 .project-desc {
     font-size: 1rem;
     margin: 0.5rem 1rem 1.5rem;
-    color: #444;
+    color: #282828;
 }
 
 .menu-bar u1{
