@@ -7,6 +7,10 @@ permalink: /about/
 # Hello!
 I go by Noellva! This about me is short and sweet - you can check out my blog for the long rambly ones.<br><br>
 
+I do want to state that this website is all made by me! So, it's not really mobile friendly. Hopefully you're not on mobile! <br><br>
+
+It is also still in development. So expect some things to not be filled out or have temp pages. <br><br>
+
 # About Me!
 I'm a hobbiest game dev currently employed in middleware, and I do lots of coding. I love low level systems (mostly graphics), embedded GPU programming, cats, writing, and tooling! <br><br>
 
