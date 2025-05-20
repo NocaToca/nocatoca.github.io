@@ -71,6 +71,37 @@ h1 {
     color: #e02fb7;
 }
 
+.small-projects-grid {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+  
+.small-card {
+    background-color: #1c1c1c;
+    padding: 0.5rem;
+    border-radius: 10px;
+    width: 150px;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.small-card:hover {
+    transform: scale(1.05);
+}
+
+.small-card img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+.small-card h3 {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    color: #f3f3f3;
+}
+
 .menu-bar u1{
     list-style: none;
     margin: 0;
