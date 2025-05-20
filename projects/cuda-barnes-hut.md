@@ -4,9 +4,9 @@ title: CUDA Barnes Hut
 permalink: /projects/cuda-barnes-hut/
 ---
 
-[Code](https://github.com/NocaToca/CUDA-Barnes-Hut?tab=readme-ov-file)
+# [Code](https://github.com/NocaToca/CUDA-Barnes-Hut?tab=readme-ov-file) <br><br>
 
-[Write-Up](https://docs.google.com/document/d/1a9YPQ1YdiOTFx864HNF2UlbCzCvARnTqW7a4SNW86MM/edit?tab=t.0#heading=h.n51h1yp7slig)
+# [Write-Up](https://docs.google.com/document/d/1a9YPQ1YdiOTFx864HNF2UlbCzCvARnTqW7a4SNW86MM/edit?tab=t.0#heading=h.n51h1yp7slig)<br><br>
 
 # Overview
 While taking a CUDA course, I decided to revisit the an old idea I had. I made a simulation in Unity a long time ago that didn't have actual gravity interaction. I wanted to change this, using GPU programming to implement a more realistic n-body simulation. <br><br>
