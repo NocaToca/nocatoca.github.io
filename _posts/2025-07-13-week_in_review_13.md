@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Generation - Weekly Update #12"
-date: 2025-06-21
+title: "Generation - Weekly Update #13"
+date: 2025-07-12
 excerpt: "Setting up Ship Generation Among Other News!"
 categories: [GameDev,Project,Update,New]
 pinned: false
