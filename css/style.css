@@ -47,7 +47,8 @@ body
     /* Centering and sizing */
     max-width: 700px;
     margin: 15vh auto; /* Centers the box with some breathing room at the top */
-    
+    height: 50%;
+
     /* Flexbox to put image on left, text on right */
     display: flex;
     align-items: center;
