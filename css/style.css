@@ -34,6 +34,9 @@ body
 
 /* --- THE MAIN BOX LAYOUT --- */
 .content-box {
+    position: relative;
+    z-index: 2;
+
     /* The Box Look */
     background: rgba(15, 15, 15, 0.75); /* Dark semi-transparent background */
     backdrop-filter: blur(8px); /* Gives it a nice modern glass look */
@@ -49,6 +52,8 @@ body
     display: flex;
     align-items: center;
     gap: 40px; 
+
+    margin: 0;
 }
 
 /* --- PROFILE IMAGE --- */
@@ -270,11 +275,49 @@ body
 }
 
 #shader-canvas {
-    position: fixed;
+    position: absolute; /* Changed from 'fixed' */
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
-    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Background layer */
+}
+
+/* --- Landing SECTION --- */
+.landing {
+    position: relative; /* Contains the absolute canvas */
+    width: 100%;
+    height: 100vh; /* Keeps the landing exactly one screen tall */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+
+/* --- PROJECTS SECTION --- */
+.projects-section {
+    background: #0a0a0a; /* A solid dark color to transition into */
+    padding: 80px 20px;
+    color: white;
+    min-height: 500px;
+}
+
+.carousel-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto; /* Simple horizontal scroll for now */
+    padding: 20px 0;
+}
+
+.project-card {
+    min-width: 300px;
+    height: 200px;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
