@@ -306,24 +306,25 @@ body
 }
 
 .carousel-wrapper {
-    max-width: 800px;      /* Controls how wide the carousel is on screen */
-    margin: 0 auto;        /* Centers the wrapper on the page */
-    border-radius: 20px;   /* The rounded corners */
-    overflow: hidden;      /* Prevents inner cards from spilling out of the rounded corners */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Nice floating shadow */
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle outline */
+    max-width: 1000px; /* Made slightly wider to fit the side cards better */
+    margin: 0 auto;
+    position: relative; /* Crucial: Keeps the absolute arrows inside this box */
+    border-radius: 20px;
+    overflow: hidden;
 }
 .carousel-container {
-    display: flex;
+display: flex;
     overflow-x: auto;
-    
-    /* THE MAGIC: CSS Scroll Snapping */
     scroll-snap-type: x mandatory; 
     scroll-behavior: smooth;
     
-    /* Hides the ugly native scrollbar for a cleaner look */
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;     /* Firefox */
+    /* This padding perfectly centers the first and last items */
+    /* 50% of container - 30% (half the card width) = 20% padding */
+    padding: 20px 20%; 
+    gap: 30px; /* Space between cards */
+    
+    -ms-overflow-style: none;  
+    scrollbar-width: none;
 }
 .carousel-container::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera */
@@ -331,10 +332,8 @@ body
 
 /* The individual items */
 .project-card {
-    flex: 0 0 100%; /* Forces every card to take up EXACTLY 100% of the wrapper's width */
-    min-height: 400px;
-    
-    /* Tells the browser to snap the center of the card to the center of the container */
+    flex: 0 0 60%; /* Cards now take up 60% width so adjacent ones are visible */
+    min-height: 350px;
     scroll-snap-align: center; 
     
     display: flex;
@@ -342,9 +341,21 @@ body
     align-items: center;
     justify-content: center;
     padding: 40px;
-    box-sizing: border-box; /* Ensures padding doesn't break the 100% width rule */
-    
+    box-sizing: border-box;
+    border-radius: 15px;
     background: linear-gradient(145deg, #1a1a1a, #111);
+    
+    /* The Animation Magic */
+    opacity: 0.4;
+    transform: scale(0.85);
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.5s ease;
+}
+
+.project-card.active {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 10px 30px rgba(0, 210, 255, 0.15); /* Subtle blue glow */
+    border: 1px solid rgba(0, 210, 255, 0.3);
 }
 
 .project-card h3 {
@@ -357,4 +368,34 @@ body
     font-size: 1.1rem;
     max-width: 80%; /* Keeps text readable and stops it from stretching too far */
     opacity: 0.8;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    backdrop-filter: blur(4px);
+    transition: background 0.2s, transform 0.2s;
+}
+
+.carousel-btn:hover {
+    background: rgba(0, 210, 255, 0.8); /* Glows blue on hover */
+    transform: translateY(-50%) scale(1.1);
+}
+
+.left-btn { left: 15px; }
+.right-btn { right: 15px; }
+
+/* Hide arrows on very small screens where swiping is natural */
+@media (max-width: 768px) {
+    .carousel-btn { display: none; }
 }

@@ -46,8 +46,12 @@
     <section class="projects-section">
         <h2>Projects</h2>
         <div class="carousel-wrapper">
+
+        <button class="carousel-btn left-btn" id="prevBtn" aria-label="Previous">❮</button>
+        <button class="carousel-btn right-btn" id="nextBtn" aria-label="Next">❯</button>
+
             <div class="carousel-container">
-                <div class="project-card">
+                <div class="project-card active">
                     <h3>Temp</h3>
                     <p>Temp desc</p>
                 </div>
@@ -602,6 +606,45 @@ const start = performance.now();
     frame++;
   }
   loop(performance.now());
+
+    // --- CAROUSEL LOGIC ---
+    const carousel = document.getElementById('projects-carousel');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const cards = document.querySelectorAll('.project-card');
+
+    // 1. Button Clicking Logic
+    // Scrolls the container by the width of one card + the gap
+    nextBtn.addEventListener('click', () => {
+        // getBoundingClientRect().width gets the exact pixel width of the card
+        const cardWidth = cards[0].getBoundingClientRect().width;
+        carousel.scrollBy({ left: cardWidth + 30, behavior: 'smooth' }); // 30 is the CSS gap
+    });
+
+    prevBtn.addEventListener('click', () => {
+        const cardWidth = cards[0].getBoundingClientRect().width;
+        carousel.scrollBy({ left: -(cardWidth + 30), behavior: 'smooth' });
+    });
+
+    // 2. Intersection Observer (The "Focus" detector)
+    // This watches the cards. When a card crosses the center of the screen, it gets the '.active' class.
+    const observerOptions = {
+        root: carousel,
+        threshold: 0.6 // Triggers when 60% of the card is inside the center view
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            } else {
+                entry.target.classList.remove('active');
+            }
+        });
+    }, observerOptions);
+
+    // Attach the observer to every card
+    cards.forEach(card => observer.observe(card));
 })();
 </script>
 </body>
