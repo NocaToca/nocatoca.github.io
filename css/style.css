@@ -45,7 +45,7 @@ body
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     
     /* Centering and sizing */
-    max-width: 700px;
+    max-width: 1200px;
     margin: 15vh auto; /* Centers the box with some breathing room at the top */
     height: 50%;
 
