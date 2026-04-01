@@ -299,26 +299,62 @@ body
 
 /* --- PROJECTS SECTION --- */
 .projects-section {
-    background: #0a0a0a; /* A solid dark color to transition into */
+    background: #0a0a0a; 
     padding: 80px 20px;
     color: white;
-    min-height: 500px;
+    text-align: center; /* Centers the heading above the carousel */
 }
 
+.carousel-wrapper {
+    max-width: 800px;      /* Controls how wide the carousel is on screen */
+    margin: 0 auto;        /* Centers the wrapper on the page */
+    border-radius: 20px;   /* The rounded corners */
+    overflow: hidden;      /* Prevents inner cards from spilling out of the rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Nice floating shadow */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle outline */
+}
 .carousel-container {
     display: flex;
-    gap: 20px;
-    overflow-x: auto; /* Simple horizontal scroll for now */
-    padding: 20px 0;
+    overflow-x: auto;
+    
+    /* THE MAGIC: CSS Scroll Snapping */
+    scroll-snap-type: x mandatory; 
+    scroll-behavior: smooth;
+    
+    /* Hides the ugly native scrollbar for a cleaner look */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
+}
+.carousel-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
 }
 
+/* The individual items */
 .project-card {
-    min-width: 300px;
-    height: 200px;
-    background: #1a1a1a;
-    border: 1px solid #333;
-    border-radius: 10px;
+    flex: 0 0 100%; /* Forces every card to take up EXACTLY 100% of the wrapper's width */
+    min-height: 400px;
+    
+    /* Tells the browser to snap the center of the card to the center of the container */
+    scroll-snap-align: center; 
+    
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 40px;
+    box-sizing: border-box; /* Ensures padding doesn't break the 100% width rule */
+    
+    background: linear-gradient(145deg, #1a1a1a, #111);
+}
+
+.project-card h3 {
+    font-size: 2.5rem;
+    margin: 0 0 15px 0;
+    color: #00d2ff; /* A nice highlight color */
+}
+
+.project-card p {
+    font-size: 1.1rem;
+    max-width: 80%; /* Keeps text readable and stops it from stretching too far */
+    opacity: 0.8;
 }
