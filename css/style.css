@@ -70,7 +70,6 @@ body
 .text-and-socials h1 {
     margin: 0 0 5px 0;
     font-size: 3rem; 
-    /* The Tangerine font you linked is usually best for huge titles! */
 }
 
 .text-and-socials p {
@@ -105,15 +104,6 @@ body
     height: 100vh; 
     color: white; 
     text-align: center;
-}
-
-
-.profile-img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-    border: 3px solid white;
 }
 
 .menu-bar u1{
