@@ -1,4 +1,4 @@
-body{
+/* body{
     background-image: url('/images/background.jpg');
     background-size: cover;
     background-position: center;
@@ -6,6 +6,95 @@ body{
     background-attachment: fixed;
     height: 100vh;
     margin: 0;
+} */
+
+body
+{
+    margin: 0;
+    overflow-x: hidden;
+    color: #ffffff;
+}
+
+/* Shadertoy iframe styling */
+.shader-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* Pushes the shader behind your content */
+    pointer-events: none; /* Ensures you can't accidentally click/drag the background */
+}
+
+.shader-bg iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* --- THE MAIN BOX LAYOUT --- */
+.content-box {
+    /* The Box Look */
+    background: rgba(15, 15, 15, 0.75); /* Dark semi-transparent background */
+    backdrop-filter: blur(8px); /* Gives it a nice modern glass look */
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    
+    /* Centering and sizing */
+    max-width: 700px;
+    margin: 15vh auto; /* Centers the box with some breathing room at the top */
+    
+    /* Flexbox to put image on left, text on right */
+    display: flex;
+    align-items: center;
+    gap: 40px; 
+}
+
+/* --- PROFILE IMAGE --- */
+.profile-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255, 255, 255, 0.2); /* Subtle ring around the pfp */
+    flex-shrink: 0; /* Prevents the image from squishing */
+}
+
+/* --- TEXT & SOCIALS --- */
+.text-and-socials {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-and-socials h1 {
+    margin: 0 0 5px 0;
+    font-size: 3rem; 
+    /* The Tangerine font you linked is usually best for huge titles! */
+}
+
+.text-and-socials p {
+    margin: 0 0 20px 0;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Social Icons Layout */
+.social-circles {
+    display: flex;
+    gap: 15px;
+}
+
+.circle-btn svg {
+    width: 28px;
+    height: 28px;
+    fill: #ffffff;
+    transition: transform 0.2s ease, fill 0.2s ease;
+}
+
+.circle-btn:hover svg {
+    transform: scale(1.15); /* Small pop effect on hover */
+    fill: #00d2ff; /* Optional: add a cool neon blue color on hover */
 }
 
 .container{
