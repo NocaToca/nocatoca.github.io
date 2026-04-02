@@ -306,7 +306,7 @@ body
 }
 
 .carousel-wrapper {
-    max-width: 1000px; /* Made slightly wider to fit the side cards better */
+    max-width: 750px; /* Made slightly wider to fit the side cards better */
     margin: 0 auto;
     position: relative; /* Crucial: Keeps the absolute arrows inside this box */
     border-radius: 20px;
@@ -323,7 +323,6 @@ display: flex;
     padding: 20px 20%; 
     gap: 30px; /* Space between cards */
     
-    max-width: 500px;
     -ms-overflow-style: none;  
     scrollbar-width: none;
 }
