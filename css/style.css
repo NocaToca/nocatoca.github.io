@@ -461,3 +461,11 @@ display: flex;
     box-shadow: 0 0 20px rgba(0, 210, 255, 0.5);
     background: #fff;
 }
+
+.footer-section {
+    background: #0a0a0a; 
+    padding: 80px 20px;
+    min-height: 250px;
+    color: white;
+    text-align: center; 
+}
