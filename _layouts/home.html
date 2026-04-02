@@ -429,10 +429,6 @@ function updateCamDir() {
   camDir[1] = Math.sin(camPitch);
   camDir[2] = -cp * Math.cos(camYaw);
 }
-canvas.addEventListener('wheel', e => {
-  e.preventDefault();
-  scroll -= 0.0012 * e.deltaY;
-}, { passive: false });
 canvas.addEventListener('mousemove', e => {
   const r = canvas.getBoundingClientRect();
   const x = (e.clientX - r.left) / r.width * canvas.width;
