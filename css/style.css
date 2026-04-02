@@ -332,7 +332,7 @@ display: flex;
 
 /* The individual items */
 .project-card {
-    flex: 0 0 60%; /* Cards now take up 60% width so adjacent ones are visible */
+    flex: 0 0 75%; /* Cards now take up 60% width so adjacent ones are visible */
     min-height: 350px;
     scroll-snap-align: center; 
     
