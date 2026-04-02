@@ -630,7 +630,7 @@ const start = performance.now();
     // This watches the cards. When a card crosses the center of the screen, it gets the '.active' class.
     const observerOptions = {
         root: carousel,
-        threshold: 0.6 // Triggers when 60% of the card is inside the center view
+        threshold: 0.95 // Triggers when 60% of the card is inside the center view
     };
 
     const observer = new IntersectionObserver((entries) => {
