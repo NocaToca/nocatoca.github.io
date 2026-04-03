@@ -5,6 +5,22 @@
     text-align: center;
 }
 
+h1, h2, h3 {
+    color: #b388ff; /* Vibrant electric purple */
+}
+
+.shader-gallery-section {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: #0a0a0a;
+    background: #0a0a0a; 
+}
+
 #shader-search {
     width: 100%;
     padding: 15px 25px;
