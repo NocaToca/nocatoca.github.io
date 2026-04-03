@@ -12,6 +12,11 @@ h1, h2, h3 {
     color: #b388ff; /* Vibrant electric purple */
 }
 
+p
+{
+    color:#fff
+}
+
 /* --- THE SHADER BANNER --- */
 .shader-banner {
     position: relative;
