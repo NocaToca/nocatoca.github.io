@@ -14,4 +14,5 @@ shaders:
     image: "/images/shaders/neon_grid.jpg"
     link: "https://github.com/..."
     tags: ["2D", "Retro", "Glow"]
+permalink: /shaders
 ---
