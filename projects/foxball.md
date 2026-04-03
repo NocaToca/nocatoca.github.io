@@ -11,7 +11,7 @@ permalink: /projects/foxball/
         <p>The project took around 3 months to complete and featured 3 levels as well as a tutorial. It is the best example of my personal charm as well as my most successful game in downloads, having around 100 total.</p>
     </div>
     <div class="image-block">
-        <img src="/images/gpu_bht_rt.jpg" alt="Barnes-Hut Simulation">
+        <img src="/images/projects/Foxball/foxball1.png" alt="Foxball">
     </div>
 </div>
 
@@ -23,7 +23,7 @@ permalink: /projects/foxball/
         <p>I found an effective method was to introduce more puzzle-like elements per enemy. For instance, the final boss requires you to use the line to trap him with his own bombs.</p>
     </div>
     <div class="image-block">
-        <img src="/images/kernel_runtimes.png" alt="Kernel Dispatch Runtimes">
+        <img src="/images/foxball_line.png" alt="Line">
     </div>
 </div>
 
