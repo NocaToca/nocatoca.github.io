@@ -1,0 +1,148 @@
+/* --- GALLERY CONTROLS --- */
+.gallery-controls {
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    text-align: center;
+}
+
+#shader-search {
+    width: 100%;
+    padding: 15px 25px;
+    font-size: 1.1rem;
+    background: rgba(20, 15, 30, 0.6);
+    border: 2px solid rgba(179, 136, 255, 0.3);
+    color: #e0dced;
+    border-radius: 50px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    margin-bottom: 25px;
+}
+
+#shader-search:focus {
+    border-color: #b388ff;
+    box-shadow: 0 0 15px rgba(179, 136, 255, 0.4);
+}
+
+.tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.tag-btn {
+    background: transparent;
+    border: 1px solid #3a1c71;
+    color: #a09eb0;
+    padding: 8px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tag-btn:hover, .tag-btn.active {
+    background: #b388ff;
+    color: #0a0a0c;
+    border-color: #b388ff;
+}
+
+/* --- SHADER GRID --- */
+.shader-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.shader-card {
+    background: rgba(15, 12, 20, 0.8);
+    border: 1px solid rgba(179, 136, 255, 0.15);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* For the JS filtering animation */
+.shader-card.hidden {
+    display: none;
+}
+
+.card-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.shader-card:hover .card-image-wrapper img {
+    transform: scale(1.1);
+}
+
+/* --- HOVER OVERLAY --- */
+.card-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(10, 10, 12, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    backdrop-filter: blur(3px);
+}
+
+.shader-card:hover .card-overlay {
+    opacity: 1;
+}
+
+.shader-link-btn {
+    padding: 10px 25px;
+    background: #b388ff;
+    color: #0a0a0c;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: transform 0.2s;
+}
+
+.shader-link-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(179, 136, 255, 0.6);
+}
+
+.shader-private-badge {
+    color: #a09eb0;
+    font-style: italic;
+    border: 1px solid #a09eb0;
+    padding: 8px 20px;
+    border-radius: 30px;
+}
+
+/* --- CARD INFO --- */
+.card-info {
+    padding: 20px;
+}
+
+.card-info h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.8rem;
+}
+
+.tiny-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    color: #b388ff;
+    background: rgba(179, 136, 255, 0.1);
+    padding: 3px 8px;
+    border-radius: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
