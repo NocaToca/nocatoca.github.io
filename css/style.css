@@ -412,7 +412,7 @@ display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    color: white;
+    color: #0a0a0a;
 }
 
 .gif-background {
