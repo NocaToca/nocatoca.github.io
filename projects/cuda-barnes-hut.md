@@ -11,7 +11,7 @@ permalink: /projects/cuda-barnes-hut/
         <p>The core of this project heavily focused on fine-tuned concurrency control and strict GPU memory management, actively balancing between shared, local, and global memory to prevent bottlenecks.</p>
     </div>
     <div class="image-block">
-        <img src="/images/barnes-hut-demo.gif" alt="Barnes-Hut Simulation Demo">
+        <img src="/images/gpu_bht_rt.jpg" alt="Barnes-Hut Simulation">
     </div>
 </div>
 
@@ -28,7 +28,7 @@ permalink: /projects/cuda-barnes-hut/
         </ul>
     </div>
     <div class="image-block">
-        <img src="/images/kernel-pipeline.jpg" alt="Kernel Dispatch Architecture">
+        <img src="/images/kernel_runtimes.jpg" alt="Kernel Dispatch Runtimes">
     </div>
 </div>
 
@@ -37,9 +37,6 @@ permalink: /projects/cuda-barnes-hut/
         <h2>Encountered Issues</h2>
         <p>I hit a slight snag during development: without a local CUDA-enabled GPU, I had to compile and run everything through Google Colab. This created a massive roadblock for real-time visualization.</p>
         <p>To verify the physics and visualize the data, I introduced an additional CPU-bound step at the end of each frame that serialized and saved the positional data, allowing me to render the final results offline.</p>
-    </div>
-    <div class="image-block">
-        <img src="/images/colab-visualization.jpg" alt="Data Visualization Output">
     </div>
 </div>
 
