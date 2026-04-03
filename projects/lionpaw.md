@@ -114,7 +114,5 @@ permalink: /projects/lionpaw/
         <h2>Moderation Features</h2>
         <p>Lionpaw held a database of problematic users that servers could report, and then notify other server owners if those problematic people joined. Other moderation features included hateful language detection as well as tracking nickname and profile picture changes. </p>
     </div>
-    <div class="image-block">
-        <img src="/images/gpu_bht_rt.jpg" alt="Lionpaw">
-    </div>
+
 </div>
