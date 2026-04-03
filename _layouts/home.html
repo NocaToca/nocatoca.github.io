@@ -502,10 +502,10 @@ const start = performance.now();
 
   function loop(now) {
     if (window.scrollY < window.innerHeight) {
-        time *= 0.001;
         gl.uniform2f(iResolutionLocation, canvas.width, canvas.height);
         gl.uniform1f(iTimeLocation, time);
         gl.drawArrays(gl.TRIANGLES, 0, 6);
+        return;
     }
     requestAnimationFrame(loop);
     const t = (now - start) / 1000;
