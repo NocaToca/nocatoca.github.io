@@ -15,6 +15,10 @@ body
     color: #ffffff;
 }
 
+h1, h2, h3 {
+    color: #b388ff; /* Vibrant electric purple */
+}
+
 /* Shadertoy iframe styling */
 .shader-bg {
     position: fixed;
