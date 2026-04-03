@@ -34,7 +34,7 @@ permalink: /projects/cuda-barnes-hut/
 
 <div class="content-row">
     <div class="text-block">
-        <h2>Overcoming Hardware Limits</h2>
+        <h2>Encountered Issues</h2>
         <p>I hit a slight snag during development: without a local CUDA-enabled GPU, I had to compile and run everything through Google Colab. This created a massive roadblock for real-time visualization.</p>
         <p>To verify the physics and visualize the data, I introduced an additional CPU-bound step at the end of each frame that serialized and saved the positional data, allowing me to render the final results offline.</p>
     </div>
