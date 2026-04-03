@@ -501,9 +501,6 @@ const start = performance.now();
   }
 
   function loop(now) {
-    if (window.scrollY < window.innerHeight) {
-        return;
-    }
     requestAnimationFrame(loop);
     const t = (now - start) / 1000;
     const dt = last ? (now - last) / 1000 : 0;
