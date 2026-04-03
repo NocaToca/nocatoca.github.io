@@ -1,11 +1,17 @@
 ---
-layout: project_page
-title: Shaders
-permalink: /projects/shaders/
+title: Shader Gallery
+layout: shaders
+shaders:
+  - title: "Star Drift Compute"
+    image: "/images/shaders/star_drift.jpg"
+    link: "https://shadertoy.com/view/..."
+    tags: ["Compute", "Space", "Noise"]
+  - title: "Barnes-Hut Core"
+    image: "/images/shaders/barnes_hut.jpg"
+    link: "" # Leave empty if there's no public link
+    tags: ["CUDA", "Simulation"]
+  - title: "Neon Grid Runner"
+    image: "/images/shaders/neon_grid.jpg"
+    link: "https://github.com/..."
+    tags: ["2D", "Retro", "Glow"]
 ---
-
-This is just a simple link to my favorite shadertoy projects! <br>
-
-[Aurorea](https://www.shadertoy.com/view/DdlGWs) <br>
-[Shading Render](https://www.shadertoy.com/view/mdB3DD) <br>
-[Phobs](https://www.shadertoy.com/view/7sySWt) <br>

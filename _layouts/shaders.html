@@ -1,0 +1,98 @@
+<section class="shader-gallery-section">
+    <div class="gallery-controls">
+        <input type="text" id="shader-search" placeholder="Search by name or tag...">
+        
+        <div class="tag-cloud" id="tag-cloud">
+            <button class="tag-btn active" data-tag="all">All</button>
+            <button class="tag-btn" data-tag="compute">Compute</button>
+            <button class="tag-btn" data-tag="simulation">Simulation</button>
+            <button class="tag-btn" data-tag="2d">2D</button>
+            <button class="tag-btn" data-tag="noise">Noise</button>
+            </div>
+    </div>
+
+    <div class="shader-grid" id="shader-grid">
+        {% for shader in page.shaders %}
+        
+        <div class="shader-card" 
+             data-title="{{ shader.title | downcase }}" 
+             data-tags="{{ shader.tags | join: ',' | downcase }}">
+             
+            <div class="card-image-wrapper">
+                <img src="{{ shader.image }}" alt="{{ shader.title }}">
+                
+                <div class="card-overlay">
+                    {% if shader.link != "" %}
+                        <a href="{{ shader.link }}" class="shader-link-btn" target="_blank">View Shader ❯</a>
+                    {% else %}
+                        <span class="shader-private-badge">Private / Embedded</span>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="card-info">
+                <h3>{{ shader.title }}</h3>
+                <div class="card-tags">
+                    {% for tag in shader.tags %}
+                        <span class="tiny-tag">{{ tag }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        
+        {% endfor %}
+    </div>
+</section>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('shader-search');
+    const tagBtns = document.querySelectorAll('.tag-btn');
+    const cards = document.querySelectorAll('.shader-card');
+    
+    let currentTag = 'all';
+    let currentSearch = '';
+
+    // Function to run the filter logic on all cards
+    function filterCards() {
+        cards.forEach(card => {
+            const title = card.getAttribute('data-title');
+            const tags = card.getAttribute('data-tags');
+            
+            // Check Tag match
+            const matchesTag = (currentTag === 'all' || tags.includes(currentTag));
+            
+            // Check Search match (checks both title and tags)
+            const matchesSearch = (currentSearch === '' || 
+                                 title.includes(currentSearch) || 
+                                 tags.includes(currentSearch));
+            
+            // If it matches BOTH, show it. Otherwise, hide it.
+            if (matchesTag && matchesSearch) {
+                card.classList.remove('hidden');
+            } else {
+                card.classList.add('hidden');
+            }
+        });
+    }
+
+    // 1. Listen for Text Search
+    searchInput.addEventListener('input', (e) => {
+        currentSearch = e.target.value.toLowerCase().trim();
+        filterCards();
+    });
+
+    // 2. Listen for Tag Clicks
+    tagBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Update active button styling
+            tagBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            
+            // Update current tag and filter
+            currentTag = btn.getAttribute('data-tag').toLowerCase();
+            filterCards();
+        });
+    });
+});
+
+</script>
