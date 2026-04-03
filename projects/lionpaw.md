@@ -25,13 +25,13 @@ permalink: /projects/lionpaw/
         </ul>
     </div>
     <div class="image-block">
-        <img src="/images/gpu_bht_rt.jpg" alt="Lionpaw">
+        <img src="/images/projects/Lionpaw/lionpaw1.png" alt="Lionpaw">
     </div>
 </div>
 
 <div class="content-row togglable-row">
     <div class="image-block">
-        <img src="/images/lionpaw_overview.jpg" alt="Lionpaw">
+        <img src="/images/lyla_help.png" alt="Lionpaw">
     </div>
 
     <div class="text-block">
@@ -56,7 +56,7 @@ permalink: /projects/lionpaw/
 
 <div class="content-row togglable-row">
     <div class="image-block">
-        <img src="/images/lionpaw_overview.jpg" alt="Lionpaw">
+        <img src="/images/lyla_chars.png" alt="Lionpaw">
     </div>
 
     <div class="text-block">
@@ -86,7 +86,7 @@ permalink: /projects/lionpaw/
 
 <div class="content-row togglable-row">
     <div class="image-block">
-        <img src="/images/lionpaw_overview.jpg" alt="Lionpaw">
+        <img src="/images/lionpaw_stats.png" alt="Lionpaw">
     </div>
 
     <div class="text-block">
