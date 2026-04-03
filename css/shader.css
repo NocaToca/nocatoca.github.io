@@ -1,3 +1,9 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a0a; /* Sets the base page color to match your theme */
+}
+
 /* --- GALLERY CONTROLS --- */
 .gallery-controls {
     max-width: 800px;
