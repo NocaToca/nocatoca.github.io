@@ -23,4 +23,34 @@
     </main>
 
     </body>
+    <script>
+
+      document.addEventListener('DOMContentLoaded', () => {
+    const rows = document.querySelectorAll('.togglable-row');
+
+    rows.forEach(row => {
+        const buttons = row.querySelectorAll('.toggle-btn');
+        const designView = row.querySelector('.design-view');
+        const techView = row.querySelector('.technical-view');
+
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // 1. Update button classes
+                buttons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                // 2. Toggle visibility
+                const target = btn.getAttribute('data-target');
+                if (target === 'technical') {
+                    designView.style.display = 'none';
+                    techView.style.display = 'block';
+                } else {
+                    designView.style.display = 'block';
+                    techView.style.display = 'none';
+                }
+            });
+        });
+    });
+});
+    </script>
 </html>
