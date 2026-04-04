@@ -28,7 +28,7 @@ shaders:
 #     link: "https://www.shadertoy.com/view/7sySWt
 #     tags: ["Fragment", "Shadertoy"]
   - title: "Ray March Basics"
-    image: "/images/shaders/rt_basic.png"
+    image: "/images/shaders/rt_basics.png"
     link: "https://www.shadertoy.com/view/mdB3DD"
     tags: ["Fragment", "Shadertoy"]
 ---
