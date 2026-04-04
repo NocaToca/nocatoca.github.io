@@ -1,7 +1,7 @@
 ---
 title: Shader Gallery
 layout: shaders
-permalink: /shaders
+permalink: /shaders/
 shaders:
   - title: "Glimmering Stars"
     image: "/images/shaders/glimmering.png"
