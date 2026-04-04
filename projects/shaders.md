@@ -2,17 +2,17 @@
 title: Shader Gallery
 layout: shaders
 shaders:
-  - title: "Star Drift Compute"
-    image: "/images/shaders/star_drift.jpg"
-    link: "https://shadertoy.com/view/..."
-    tags: ["Compute", "Space", "Noise"]
-  - title: "Barnes-Hut Core"
-    image: "/images/shaders/barnes_hut.jpg"
-    link: "" # Leave empty if there's no public link
-    tags: ["CUDA", "Simulation"]
-  - title: "Neon Grid Runner"
-    image: "/images/shaders/neon_grid.jpg"
-    link: "https://github.com/..."
-    tags: ["2D", "Retro", "Glow"]
+  - title: "Glimmering Stars"
+    image: "/images/shaders/glimmering.png"
+    link: "https://fragcoord.xyz/s/s8qfmtp2"
+    tags: ["Fragment", "FragCoord"]
+  - title: "Aurora (Skybox)"
+    image: "/images/shaders/aurora_skybox.png"
+    link: "" 
+    tags: ["Compute", "Skybox","Unity"]
+  - title: "Aurora"
+    image: "/images/shaders/aurora_base.png"
+    link: "https://www.shadertoy.com/view/DdlGWs"
+    tags: ["Fragment", "Shadertoy"]
 permalink: /shaders
 ---
