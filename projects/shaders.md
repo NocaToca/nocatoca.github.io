@@ -15,4 +15,20 @@ shaders:
     image: "/images/shaders/aurora_base.png"
     link: "https://www.shadertoy.com/view/DdlGWs"
     tags: ["Fragment", "Shadertoy"]
+  - title: "Blackhole"
+    image: "/images/shaders/blackhole.png"
+    link: ""
+    tags: ["Unity", "Fragment"]
+  - title: "Ray Tracer"
+    image: "/images/shaders/raytrace.png"
+    link: ""
+    tags: ["Unity", "Compute"]
+  - title: "Phobs"
+    image: "/images/shaders/phob_shader.png"
+    link: "https://www.shadertoy.com/view/7sySWt
+    tags: ["Fragment", "Shadertoy"]
+  - title: "Ray March Basics"
+    image: "/images/shaders/rt_basic.png"
+    link: "https://www.shadertoy.com/view/mdB3DD"
+    tags: ["Fragment", "Shadertoy"]
 ---
