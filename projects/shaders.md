@@ -23,10 +23,10 @@ shaders:
     image: "/images/shaders/raytrace.png"
     link: ""
     tags: ["Unity", "Compute"]
-  - title: "Phobs"
-    image: "/images/shaders/phob_shader.png"
-    link: "https://www.shadertoy.com/view/7sySWt
-    tags: ["Fragment", "Shadertoy"]
+#   - title: "Phobs"
+#     image: "/images/shaders/phob_shader.png"
+#     link: "https://www.shadertoy.com/view/7sySWt
+#     tags: ["Fragment", "Shadertoy"]
 #   - title: "Ray March Basics"
 #     image: "/images/shaders/rt_basic.png"
 #     link: "https://www.shadertoy.com/view/mdB3DD"
